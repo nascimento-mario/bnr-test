@@ -1,0 +1,50 @@
+# Sample products - add your actual products here
+- name: "Sourdough Loaf"
+  category: breads
+  description: "Traditional sourdough with a crispy crust and tangy flavor"
+  price: 8.50
+  image: "sourdough.jpg"
+
+- name: "Whole Wheat Sandwich Bread"
+  category: breads
+  description: "Soft and hearty, perfect for sandwiches"
+  price: 6.00
+  image: "wheat-bread.jpg"
+
+- name: "Croissant"
+  category: pastries
+  description: "Buttery, flaky layers baked to golden perfection"
+  price: 4.50
+  image: "croissant.jpg"
+
+- name: "Pain au Chocolat"
+  category: pastries
+  description: "Croissant filled with rich dark chocolate"
+  price: 5.00
+  image: "pain-chocolat.jpg"
+
+- name: "Chocolate Cake"
+  category: cakes
+  description: "Rich, moist layers with chocolate ganache"
+  price: 45.00
+  image: "chocolate-cake.jpg"
+
+- name: "Vanilla Birthday Cake"
+  category: cakes
+  description: "Classic vanilla with buttercream frosting"
+  price: 40.00
+  image: "vanilla-cake.jpg"
+
+- name: "Chocolate Chip Cookies"
+  category: cookies
+  description: "Chewy centers with crispy edges"
+  price: 12.00
+  image: "choc-chip.jpg"
+  note: "Per dozen"
+
+- name: "Oatmeal Raisin Cookies"
+  category: cookies
+  description: "Wholesome oats with sweet raisins"
+  price: 12.00
+  image: "oatmeal.jpg"
+  note: "Per dozen"

@@ -1,0 +1,19 @@
+- id: breads
+  name: "Artisan Breads"
+  description: "Handcrafted loaves baked fresh daily"
+  order: 1
+
+- id: pastries
+  name: "Pastries"
+  description: "Delicate and flaky morning treats"
+  order: 2
+
+- id: cakes
+  name: "Cakes"
+  description: "Made to order for any celebration"
+  order: 3
+
+- id: cookies
+  name: "Cookies & Treats"
+  description: "Sweet bites for any time of day"
+  order: 4

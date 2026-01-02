@@ -3,7 +3,7 @@
   category: breads
   description: "Traditional sourdough with a crispy crust and tangy flavor"
   price: 8.50
-  image: "sourdough.jpg"
+  image: "sourdough.png"
 
 - name: "Whole Wheat Sandwich Bread"
   category: breads

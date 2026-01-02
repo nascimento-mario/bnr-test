@@ -24,8 +24,15 @@
         {{ content }}
     </main>
 
-    <footer style="text-align: center; padding: 2rem; color: #6b5d52; font-size: 0.9rem;">
-        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <footer>
+        {% if site.contact_info %}
+        <div class="contact-section">
+            {{ site.contact_info | markdownify }}
+        </div>
+        {% endif %}
+        <div class="copyright">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

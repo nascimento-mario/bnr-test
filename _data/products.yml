@@ -9,7 +9,7 @@
   category: breads
   description: "Soft and hearty, perfect for sandwiches"
   price: 6.00
-  image: "wheat-bread.jpg"
+  image: "wheat-bread.png"
 
 - name: "Croissant"
   category: pastries

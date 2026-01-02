@@ -1,5 +1,5 @@
 # Site settings
-title: "Your Bakery Name"
+title: "BNR Test"
 description: "Freshly baked goods made with love"
 url: "https://nascimento-mario.github.io" # Will be your GitHub Pages URL
 baseurl: "/bnr-test" # Leave empty for root domain

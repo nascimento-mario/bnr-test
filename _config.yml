@@ -1,6 +1,6 @@
 # Site settings
 title: "BNR Test"
-description: "Freshly baked goods made with love"
+description: "THE Organic Wholegrain Bakery in Edmonton!"
 url: "https://nascimento-mario.github.io" # Will be your GitHub Pages URL
 baseurl: "/bnr-test" # Leave empty for root domain
 logo: "assets/images/logo.png" # Path to your logo file

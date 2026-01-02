@@ -13,7 +13,7 @@ title: Home
         {% assign sorted_categories = site.data.categories | sort: 'order' %}
         {% for category in sorted_categories %}
         <a href="{{ '/category/' | append: category.id | relative_url }}" class="category-card">
-            <div class="category-card-image" style="background-image: url('{{ '/assets/images/categories/' | append: category.id | append: '.jpg' | relative_url }}');">
+            <div class="category-card-image" style="background-image: url('{{ '/assets/images/categories/' | append: category.id | append: '.png' | relative_url }}');">
             </div>
             <div class="category-card-content">
                 <h2>{{ category.name }}</h2>

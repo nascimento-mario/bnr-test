@@ -1,8 +1,8 @@
 # Site settings
 title: "B&R Test"
 description: "Edmonton's source for gluten-free and vegan baked goods"
-url: "" # Will be your GitHub Pages URL
-baseurl: "" # Leave empty for root domain
+url: "https://nascimento-mario.github.io" # Will be your GitHub Pages URL
+baseurl: "/bnr-test" # Leave empty for root domain
 
 # Build settings
 markdown: kramdown

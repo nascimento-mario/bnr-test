@@ -5,6 +5,16 @@ url: "https://nascimento-mario.github.io" # Will be your GitHub Pages URL
 baseurl: "/bnr-test" # Leave empty for root domain
 logo: "assets/images/logo.png" # Path to your logo file
 
+# Contact information (supports Markdown)
+contact_info: |
+  **Visit Us**  
+  123 Main Street, Your City  
+  Open Tuesday - Saturday, 8am - 6pm
+  
+  **Call for preordering!**  
+  Phone: (555) 123-4567  
+  Email: hello@yourbakery.com
+
 # Build settings
 markdown: kramdown
 permalink: pretty

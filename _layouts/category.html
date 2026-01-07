@@ -10,22 +10,31 @@ layout: default
         <p>{{ page.category_description }}</p>
     </div>
 
-    <div class="product-grid">
-        {% assign category_products = site.data.products | where: "category", page.category_id %}
-        {% for product in category_products %}
-        <div class="product-card">
-            <div class="product-image" style="background-image: url('{{ '/assets/images/products/' | append: product.image | relative_url }}');">
+    {% assign category_products = site.data.products | where: "category", page.category_id %}
+    {% assign subcategories = category_products | map: "subcategory" | uniq | sort %}
+    
+    {% for subcategory in subcategories %}
+    <div class="subcategory-section">
+        <h2 class="subcategory-header">{{ subcategory }}</h2>
+        
+        <div class="product-grid">
+            {% assign subcategory_products = category_products | where: "subcategory", subcategory %}
+            {% for product in subcategory_products %}
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('{{ '/assets/images/products/' | append: product.image | relative_url }}');">
+                </div>
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3>
+                    <p class="product-description">{{ product.description }}</p>
+                    {% assign formatted_price = product.price | round: 2 | split: '.' %}
+                    <p class="product-price">${{ formatted_price[0] }}.{% if formatted_price[1] %}{{ formatted_price[1] }}{% if formatted_price[1].size == 1 %}0{% endif %}{% else %}00{% endif %}</p>
+                    {% if product.note %}
+                    <p class="product-note">{{ product.note }}</p>
+                    {% endif %}
+                </div>
             </div>
-            <div class="product-info">
-                <h3>{{ product.name }}</h3>
-                <p class="product-description">{{ product.description }}</p>
-                {% assign formatted_price = product.price | round: 2 | split: '.' %}
-                <p class="product-price">${{ formatted_price[0] }}.{% if formatted_price[1] %}{{ formatted_price[1] }}{% if formatted_price[1].size == 1 %}0{% endif %}{% else %}00{% endif %}</p>
-                {% if product.note %}
-                <p class="product-note">{{ product.note }}</p>
-                {% endif %}
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>

@@ -1,51 +1,87 @@
 # Sample products - add your actual products here
-# REMEMBER all files should be in PNG format
 - name: "Sourdough Loaf"
   category: breads
+  subcategory: "Traditional"
   description: "Traditional sourdough with a crispy crust and tangy flavor"
   price: 8.50
-  image: "sourdough.png"
+  image: "sourdough.jpg"
 
 - name: "Whole Wheat Sandwich Bread"
   category: breads
+  subcategory: "Traditional"
   description: "Soft and hearty, perfect for sandwiches"
   price: 6.00
-  image: "wheat-bread.png"
+  image: "wheat-bread.jpg"
+
+- name: "Gluten-Free Seed Bread"
+  category: breads
+  subcategory: "Gluten-Free"
+  description: "Hearty bread packed with seeds and nutrients"
+  price: 9.50
+  image: "gf-bread.jpg"
 
 - name: "Croissant"
   category: pastries
+  subcategory: "Traditional"
   description: "Buttery, flaky layers baked to golden perfection"
   price: 4.50
-  image: "croissant.png"
+  image: "croissant.jpg"
 
-- name: "Chocolate Croissant"
+- name: "Pain au Chocolat"
   category: pastries
+  subcategory: "Traditional"
   description: "Croissant filled with rich dark chocolate"
   price: 5.00
-  image: "chocolate-croissant.png"
+  image: "pain-chocolat.jpg"
+
+- name: "Vegan Cinnamon Roll"
+  category: pastries
+  subcategory: "Vegan"
+  description: "Soft, sweet rolls with cinnamon and dairy-free icing"
+  price: 4.75
+  image: "vegan-roll.jpg"
 
 - name: "Chocolate Cake"
   category: cakes
+  subcategory: "Traditional"
   description: "Rich, moist layers with chocolate ganache"
   price: 45.00
-  image: "chocolate-cake.png"
+  image: "chocolate-cake.jpg"
 
 - name: "Vanilla Birthday Cake"
   category: cakes
+  subcategory: "Traditional"
   description: "Classic vanilla with buttercream frosting"
   price: 40.00
-  image: "vanilla-cake.png"
+  image: "vanilla-cake.jpg"
+
+- name: "Vegan Carrot Cake"
+  category: cakes
+  subcategory: "Vegan"
+  description: "Moist carrot cake with dairy-free cream cheese frosting"
+  price: 42.00
+  image: "vegan-carrot.jpg"
 
 - name: "Chocolate Chip Cookies"
   category: cookies
+  subcategory: "Traditional"
   description: "Chewy centers with crispy edges"
   price: 12.00
-  image: "choc-chip.png"
+  image: "choc-chip.jpg"
   note: "Per dozen"
 
 - name: "Oatmeal Raisin Cookies"
   category: cookies
+  subcategory: "Traditional"
   description: "Wholesome oats with sweet raisins"
   price: 12.00
-  image: "oatmeal.png"
+  image: "oatmeal.jpg"
+  note: "Per dozen"
+
+- name: "Gluten-Free Almond Cookies"
+  category: cookies
+  subcategory: "Gluten-Free"
+  description: "Delicate almond flavor, naturally gluten-free"
+  price: 14.00
+  image: "gf-almond.jpg"
   note: "Per dozen"

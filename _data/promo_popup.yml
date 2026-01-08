@@ -1,6 +1,6 @@
 # _data/promo_popup.yml
 enabled: true
-frequency_days: 4  # Show popup every X days
+frequency_days: 0  # Show popup every X days
 delay_seconds: 2   # Wait X seconds before showing popup
 
 # Popup content

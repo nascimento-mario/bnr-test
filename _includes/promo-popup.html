@@ -1,0 +1,188 @@
+{% if site.data.promo_popup.enabled %}
+<div id="promo-popup" class="promo-popup-overlay" style="display: none;">
+  <div class="promo-popup-content">
+    <button class="promo-popup-close" aria-label="Close popup">&times;</button>
+    
+    {% if site.data.promo_popup.image %}
+    <img src="{{ site.data.promo_popup.image }}" alt="Promotion" class="promo-popup-image">
+    {% endif %}
+    
+    <h2>{{ site.data.promo_popup.title }}</h2>
+    <p>{{ site.data.promo_popup.message }}</p>
+    
+    <div class="promo-popup-buttons">
+      <a href="{{ site.data.promo_popup.button_link }}" class="promo-popup-btn primary">
+        {{ site.data.promo_popup.button_text }}
+      </a>
+      <button class="promo-popup-btn secondary promo-popup-dismiss">
+        {{ site.data.promo_popup.close_button_text }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+.promo-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.promo-popup-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+.promo-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+}
+
+.promo-popup-close:hover {
+  color: #333;
+}
+
+.promo-popup-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.promo-popup-content h2 {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.promo-popup-content p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.promo-popup-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.promo-popup-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.promo-popup-btn.primary {
+  background: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.promo-popup-btn.primary:hover {
+  background: #45a049;
+}
+
+.promo-popup-btn.secondary {
+  background: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.promo-popup-btn.secondary:hover {
+  background: #f5f5f5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+
+<script>
+(function() {
+  const popup = document.getElementById('promo-popup');
+  if (!popup) return;
+
+  const closeBtn = popup.querySelector('.promo-popup-close');
+  const dismissBtn = popup.querySelector('.promo-popup-dismiss');
+  const frequencyDays = {{ site.data.promo_popup.frequency_days | default: 7 }};
+  const delaySeconds = {{ site.data.promo_popup.delay_seconds | default: 3 }};
+  
+  // Check if popup should be shown based on schedule
+  {% if site.data.promo_popup.schedule.start_date and site.data.promo_popup.schedule.end_date %}
+  const startDate = new Date('{{ site.data.promo_popup.schedule.start_date }}');
+  const endDate = new Date('{{ site.data.promo_popup.schedule.end_date }}');
+  const today = new Date();
+  
+  if (today < startDate || today > endDate) {
+    return; // Don't show popup outside scheduled dates
+  }
+  {% endif %}
+
+  function shouldShowPopup() {
+    const lastShown = localStorage.getItem('promoPopupLastShown');
+    if (!lastShown) return true;
+    
+    const daysSinceLastShown = (Date.now() - parseInt(lastShown)) / (1000 * 60 * 60 * 24);
+    return daysSinceLastShown >= frequencyDays;
+  }
+
+  function showPopup() {
+    if (shouldShowPopup()) {
+      setTimeout(() => {
+        popup.style.display = 'flex';
+      }, delaySeconds * 1000);
+    }
+  }
+
+  function hidePopup() {
+    popup.style.display = 'none';
+    localStorage.setItem('promoPopupLastShown', Date.now().toString());
+  }
+
+  closeBtn.addEventListener('click', hidePopup);
+  dismissBtn.addEventListener('click', hidePopup);
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) hidePopup();
+  });
+
+  showPopup();
+})();
+</script>
+{% endif %}

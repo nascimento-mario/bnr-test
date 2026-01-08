@@ -1,11 +1,11 @@
 # _data/promo_popup.yml
 enabled: true
 frequency_days: 4  # Show popup every X days
-delay_seconds: 3   # Wait X seconds before showing popup
+delay_seconds: 2   # Wait X seconds before showing popup
 
 # Popup content
 title: "Special Offer!"
-message: "Get 20% off your first order with code FIRST20"
+message: "New website celebration! Mention this ad when you call and get 10% discount"
 image: "/assets/images/promo-banner.jpg"  # Optional
 button_text: "Shop Now"
 button_link: "/category/products.html"

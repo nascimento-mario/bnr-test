@@ -6,7 +6,7 @@ delay_seconds: 2   # Wait X seconds before showing popup
 # Popup content
 title: "Special Offer to Celebrate the New Website!"
 message: "Mention this ad when you call in and GET A 10% DISCOUNT!"
-image: "/assets/images/promo-banner.png" 
+image: "assets/images/promo-banner.png" 
 button_text: "Shop Now"
 button_link: "/category/products.html"
 close_button_text: "Maybe Later"

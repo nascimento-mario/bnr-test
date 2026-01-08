@@ -4,8 +4,8 @@ frequency_days: 0  # Show popup every X days
 delay_seconds: 2   # Wait X seconds before showing popup
 
 # Popup content
-title: "Special Offer to Celebrate the New Website!"
-message: "Mention this ad when you call in and GET A 10% DISCOUNT!"
+title: "Let's celebrate our<br> new website!"
+message: "Mention this ad when you call<br>and GET A 10% DISCOUNT!"
 image: "assets/images/promo-banner.png" 
 button_text: "Shop Now"
 button_link: "/category/products.html"

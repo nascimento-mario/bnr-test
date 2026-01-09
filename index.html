@@ -1,27 +1,3 @@
----
-layout: default
-title: Home
----
-
-<div class="container">
-    <div class="page-header">
-        <h1>Our Products</h1>
-        <p>Browse our selection of freshly baked goods</p>
-    </div>
-
-    <div class="category-grid">
-        {% assign sorted_categories = site.data.categories | sort: 'order' %}
-        {% for category in sorted_categories %}
-        <a href="{{ '/category/' | append: category.id | relative_url }}" class="category-card">
-            <div class="category-card-image" style="background-image: url('{{ '/assets/images/categories/' | append: category.id | append: '.png' | relative_url }}');">
-            </div>
-            <div class="category-card-content">
-                <h2>{{ category.name }}</h2>
-                <p>{{ category.description }}</p>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
-</div>
-
-{% include promo-popup.html %}
+{% if site.data.promo_popup.image %}
+<img src="{{ site.baseurl }}/{{ site.data.promo_popup.image }}" alt="Website Coming Soon" class="promo-popup-image">
+{% endif %}

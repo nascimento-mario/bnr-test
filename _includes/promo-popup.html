@@ -4,7 +4,7 @@
     <button class="promo-popup-close" aria-label="Close popup">&times;</button>
     
     {% if site.data.promo_popup.image %}
-    <img src="{{ site.data.promo_popup.image }}" alt="Promotion" class="promo-popup-image">
+    <img src="{{ site.baseurl }}/{{ site.data.promo_popup.image }}" alt="Promotion" class="promo-popup-image">
     {% endif %}
     
     <h2>{{ site.data.promo_popup.title }}</h2>

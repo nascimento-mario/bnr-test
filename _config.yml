@@ -1,8 +1,8 @@
 # Site settings
 title: "B&R Testing Website"
 description: "THE Organic Wholegrain Bakery in the city!"
-url: "https://nascimento-mario.github.io" # Will be your GitHub Pages URL
-baseurl: "/bnr-test" # Leave empty for root domain
+url: "https://bunsandrosesbakery.com"
+baseurl: ""
 logo: "assets/images/logo.png" # Path to your logo file
 
 # Contact information (supports Markdown)
